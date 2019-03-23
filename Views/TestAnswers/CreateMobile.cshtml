@@ -15,10 +15,12 @@
     //else
     //{
     Layout = "~/Views/Shared/_DashboardLayoutMobile.cshtml";
-//}
+    //}
 }
 
 @{
+    int counter = 0;
+
     var disabled = "";
     bool hasAnswered = false;
     foreach (var answers in Model.TestAnswers)
@@ -110,7 +112,7 @@
                         </div>
                         <div class="media-body">
 
-                            <h4 class="text-headline">Question </h4>
+                            <h4 class="text-headline">Question @(++counter) </h4>
                             <p>@item.Question</p>
                         </div>
                     </div>
